@@ -3,7 +3,7 @@ require_once("functions.php");
 
 $message = "";
 if(isset($_POST['submit'])) {
-	set_include_path("$_SERVER[DOCUMENT_ROOT]");
+	set_include_path(get_include_path() . PATH_SEPARATOR);
 	include_once("Google_Spreadsheet.php");
 	$u = "joe@rarebreeddigital.com"; //sherren7@gmail.com
 	$p = "Ezekiel17"; //diexpipe
@@ -39,7 +39,6 @@ if(isset($_POST['submit'])) {
 		<div id="container" class="small">
 			<div id="logo"></div>
 			<h3 class="grey">Sign up to receive news on our beta release</h3>
-			<p><?php echo get_include_path() . PATH_SEPARATOR . "$_SERVER[DOCUMENT_ROOT]"; ?></p>
 			<p class="ampersand">&amp;</p>
 			 <form enctype="multipart/form-data" method="post" action="/">
 				<input type="text" name="name" value="Name" id="contact_name" class="left" onFocus="this.value=' ' ">
