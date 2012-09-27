@@ -3,7 +3,7 @@ require_once("functions.php");
 
 $message = "";
 if(isset($_POST['submit'])) {
-	set_include_path(get_include_path() . PATH_SEPARATOR);
+	set_include_path("$_SERVER[DOCUMENT_ROOT]");
 	include_once("Google_Spreadsheet.php");
 	$u = "joe@rarebreeddigital.com"; //sherren7@gmail.com
 	$p = "Ezekiel17"; //diexpipe
