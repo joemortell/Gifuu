@@ -5,10 +5,10 @@ $message = "";
 if(isset($_POST['submit'])) {
 	set_include_path(get_include_path() . PATH_SEPARATOR);
 	include_once("Google_Spreadsheet.php");
-	$u = "joe@rarebreeddigital.com"; //sherren7@gmail.com
-	$p = "Ezekiel17"; //diexpipe
+	$u = "sherren7@gmail.com"; 
+	$p = "diexpipe";
 	$ss = new Google_Spreadsheet($u,$p);
-	$ss->useSpreadsheet("Signup"); //Gifuu Signup
+	$ss->useSpreadsheet("Gifuu Signup");
 	$name = $_POST['name'];
 	$email = $_POST['email'];
 		if (strpos($email,'@') == true) {
