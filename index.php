@@ -1,10 +1,9 @@
 <?php  
 require_once("functions.php"); 
-set_include_path(get_include_path() . PATH_SEPARATOR . "$_SERVER[DOCUMENT_ROOT]");
 
 $message = "";
 if(isset($_POST['submit'])) {
-	set_include_path(get_include_path() . PATH_SEPARATOR . "$_SERVER[DOCUMENT_ROOT]");
+	set_include_path(get_include_path() . PATH_SEPARATOR);
 	include_once("Google_Spreadsheet.php");
 	$u = "joe@rarebreeddigital.com"; //sherren7@gmail.com
 	$p = "Ezekiel17"; //diexpipe
