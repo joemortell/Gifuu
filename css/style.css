@@ -192,9 +192,9 @@ div.message
 	{ 	background:		#39b54a; }
 #logo
 {
-	height:			185px;
-	width:			363px;
-	background:		url(../img/logo.png) no-repeat 0 0;
+	height:			300px;
+	width:			287px;
+	background:		url(../img/character.png) no-repeat 0 0;
 	margin:			60px auto 20px auto;
 }
 ul.grid_2 li
