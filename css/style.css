@@ -37,7 +37,7 @@ h2,h3,h4,h5,h6
 }
 a
 {
-	color:			#E4E1E1;
+	color:			#eb5432;
 	text-decoration:underline;
 }
 ::selection
@@ -199,7 +199,7 @@ div.message
 }
 ul.grid_2 li
 {
-	width:			210px;
+	width:			310px;
 	float:			left;
 	margin:			0 auto;
 }

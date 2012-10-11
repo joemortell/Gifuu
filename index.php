@@ -48,7 +48,7 @@ if(isset($_POST['submit'])) {
 			<?php if (!$message == '') :?>
 				<div class="message"><?php echo $message ?></div>
 			<?php endif; ?>
-			<h3>Come gift and play, interested merchants, partners, sponsers and friends,
+			<h3>Come gift and play, interested merchants, partners, sponsors and friends,
 			Join us <a href="mailto:sherren@gifuu.com">now</a></h3>
 		
 		</div>
@@ -76,17 +76,6 @@ if(isset($_POST['submit'])) {
 						<h2>friend receives</h2>
 						<p>Receiver walks into the store to pick up her gift. She can SHOUT out her joy on social media or 
 							thank for friend privately.</p>
-					</li>
-					<li class="friendpool">
-						<h2>friend pool</h2>
-						<p>Pick a few friends near or far, same country or afar. Group together to gift and chat.
-						Share pay and $track, add personalized messages and send away.</p>
-					</li>
-					<li class="message">
-						<h2>cheeky message texter</h2>
-						<p>Lost for words? Brain locked and can&#39;t articulate the moment? Tongue tied no longer 
-						With our fun sensible message texter.
-						</p>
 					</li>
 				</ul>
 				<div class="clearfix"></div>
