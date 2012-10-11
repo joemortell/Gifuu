@@ -38,6 +38,7 @@ if(isset($_POST['submit'])) {
 		<a href="#wrapper" id="scroll-to">How To Use gifuu</a>
 		<div id="container" class="small">
 			<div id="logo"></div>
+			<h3>Give a real gift virtually</h3>
 			<h3 class="grey">Sign up to receive news on our beta release</h3>
 			<p class="ampersand">&amp;</p>
 			 <form enctype="multipart/form-data" method="post" action="/">
