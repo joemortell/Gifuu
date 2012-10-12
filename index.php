@@ -38,7 +38,7 @@ if(isset($_POST['submit'])) {
 		<a href="#wrapper" id="scroll-to">How To Use gifuu</a>
 		<div id="container" class="small">
 			<div id="logo"></div>
-			<h3>Give a real gift virtually</h3>
+			<h1>Give a real gift virtually</h1>
 			<h3 class="grey">Sign up to receive news on our beta release</h3>
 			<p class="ampersand">&amp;</p>
 			 <form enctype="multipart/form-data" method="post" action="/">
@@ -92,5 +92,68 @@ if(isset($_POST['submit'])) {
 			<p class="copyright grey clearfix">Copyright &copy; 2012 gifuu. All Rights Reserved.</p>
 			<div class="clearfix"></div>
 		</div>
+		<script type="text/javascript">
+
+				$(document).ready(function() {
+				  function filterPath(string) {
+				  return string
+				    .replace(/^\//,'')
+				    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
+				    .replace(/\/$/,'');
+				  }
+				  var locationPath = filterPath(location.pathname);
+				  var scrollElem = scrollableElement('html', 'body');
+
+				  $('a[href*=#]').each(function() {
+				    var thisPath = filterPath(this.pathname) || locationPath;
+				    if (  locationPath == thisPath
+				    && (location.hostname == this.hostname || !this.hostname)
+				    && this.hash.replace(/#/,'') ) {
+				      var $target = $(this.hash), target = this.hash;
+				      if (target) {
+				        var targetOffset = $target.offset().top;
+				        $(this).click(function(event) {
+				          event.preventDefault();
+				          $(scrollElem).animate({scrollTop: targetOffset}, 600, function() {
+				            location.hash = target;
+				          });
+				        });
+				      }
+				    }
+				  });
+
+				  // use the first element that is "scrollable"
+				  function scrollableElement(els) {
+				    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
+				      var el = arguments[i],
+				          $scrollElement = $(el);
+				      if ($scrollElement.scrollTop()> 0) {
+				        return el;
+				      } else {
+				        $scrollElement.scrollTop(1);
+				        var isScrollable = $scrollElement.scrollTop()> 0;
+				        $scrollElement.scrollTop(0);
+				        if (isScrollable) {
+				          return el;
+				        }
+				      }
+				    }
+				    return [];
+				  }
+
+				});
+
+				// Pop-up Message
+				$(document).ready(function(){
+					$('#scroll-to').fadeIn('slow');
+				 $(window).scroll(function(){
+				  var h = 350;
+				  var y = $(window).scrollTop();
+				  if( y > h ){
+				   $('#scroll-to').fadeOut('fast');
+				  }
+				 });
+				})
+				</script>
 	</body>	
 </html>
