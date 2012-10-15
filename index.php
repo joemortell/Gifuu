@@ -31,11 +31,9 @@ if(isset($_POST['submit'])) {
 		<link href='http://fonts.googleapis.com/css?family=Lato:400' rel='stylesheet' type='text/css'>
 		<link href='css/reset.css' rel='stylesheet' type='text/css'>
 		<link href='css/style.css' rel='stylesheet' type='text/css'>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.3/jquery.min.js"></script>
 	</head>
 	
 	<body>
-		<a href="#wrapper" id="scroll-to">How To Use gifuu</a>
 		<div id="container" class="small">
 			<div id="logo"></div>
 			<h1>Give a real gift virtually</h1>
@@ -76,7 +74,7 @@ if(isset($_POST['submit'])) {
 					<li class="receive">
 						<h2>friend receives</h2>
 						<p>Receiver walks into the store to pick up her gift. She can SHOUT out her joy on social media or 
-							thank for friend privately.</p>
+							thank her friend privately.</p>
 					</li>
 				</ul>
 				<div class="clearfix"></div>
@@ -92,68 +90,5 @@ if(isset($_POST['submit'])) {
 			<p class="copyright grey clearfix">Copyright &copy; 2012 gifuu. All Rights Reserved.</p>
 			<div class="clearfix"></div>
 		</div>
-		<script type="text/javascript">
-
-				$(document).ready(function() {
-				  function filterPath(string) {
-				  return string
-				    .replace(/^\//,'')
-				    .replace(/(index|default).[a-zA-Z]{3,4}$/,'')
-				    .replace(/\/$/,'');
-				  }
-				  var locationPath = filterPath(location.pathname);
-				  var scrollElem = scrollableElement('html', 'body');
-
-				  $('a[href*=#]').each(function() {
-				    var thisPath = filterPath(this.pathname) || locationPath;
-				    if (  locationPath == thisPath
-				    && (location.hostname == this.hostname || !this.hostname)
-				    && this.hash.replace(/#/,'') ) {
-				      var $target = $(this.hash), target = this.hash;
-				      if (target) {
-				        var targetOffset = $target.offset().top;
-				        $(this).click(function(event) {
-				          event.preventDefault();
-				          $(scrollElem).animate({scrollTop: targetOffset}, 600, function() {
-				            location.hash = target;
-				          });
-				        });
-				      }
-				    }
-				  });
-
-				  // use the first element that is "scrollable"
-				  function scrollableElement(els) {
-				    for (var i = 0, argLength = arguments.length; i <argLength; i++) {
-				      var el = arguments[i],
-				          $scrollElement = $(el);
-				      if ($scrollElement.scrollTop()> 0) {
-				        return el;
-				      } else {
-				        $scrollElement.scrollTop(1);
-				        var isScrollable = $scrollElement.scrollTop()> 0;
-				        $scrollElement.scrollTop(0);
-				        if (isScrollable) {
-				          return el;
-				        }
-				      }
-				    }
-				    return [];
-				  }
-
-				});
-
-				// Pop-up Message
-				$(document).ready(function(){
-					$('#scroll-to').fadeIn('slow');
-				 $(window).scroll(function(){
-				  var h = 350;
-				  var y = $(window).scrollTop();
-				  if( y > h ){
-				   $('#scroll-to').fadeOut('fast');
-				  }
-				 });
-				})
-				</script>
 	</body>	
 </html>
